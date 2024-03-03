@@ -23,6 +23,10 @@ public class StudentStream implements Iterable<StudentGroup> {
     }
 
 
+    /**
+     * @param group
+     * @return список студентов извлеченный из одной группы потока
+     */
     private List<Student> OneGroup(StudentGroup group){
         List<Student> listStudents = new ArrayList<Student>();
         for (int i = 0; i < group.getSize(); i++) {
@@ -31,6 +35,9 @@ public class StudentStream implements Iterable<StudentGroup> {
         return listStudents;
     }
 
+    /**
+     * @return количество студентов всего потока
+     */
     private Integer getSizeOfStream(){
         List<Student> group = new ArrayList<Student>();
         Integer number = 0;
@@ -43,7 +50,10 @@ public class StudentStream implements Iterable<StudentGroup> {
         return number;
     }
 
-    
+
+    /**
+     * @return StringBuilder, список всех студентов потока
+     */
     private StringBuilder listOfStudents(){
         List<Student> group = new ArrayList<Student>();
         StringBuilder listAllStudens = new StringBuilder();
